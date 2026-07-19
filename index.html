@@ -1,31 +1,37 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>
       rock paper scissor 
     </title>
-    <link rel="stylesheet"  href="12-rock-paper-scissor.css">
+    <link rel="stylesheet"  href="10-rock-paper-scissor.css">
   </head>
 
    
   <body>
      <P class="text">
-      Rock Paper Scissor
+     ✊ Rock Paper Scissor ✋
     </P>
-    <button onclick="
-      "
-       class="move-icon  js-rock-move"
+    <div class="button-container"><button onclick="
+     computerMove = pickComputerMove();
+      playgame('rock'); "
+       class="move-icon"
      ><img class="icon-image" src="rock-emoji.png"></button>
 
     <button onclick="
-    "
-     class="move-icon js-paper-move"
+    playgame('paper')
+     computerMove=pickComputerMove();"
+     class="move-icon"
      > <img src="paper-emoji.png"  class="icon-image"></button>
 
     <button onclick="
-    "
-    class="move-icon js-scissor-move"
+    computerMove=pickComputerMove();
+    playgame('scissors');"
+    class="move-icon"
     > <img src="scissors-emoji.png"  class="icon-image"></button>
+    </div>
 
      <div class="query-text">
       <P class="js-player"></P>
@@ -43,10 +49,7 @@
     scoreonpage();
     localStorage.removeItem('score');
 "   class="reset">Reset Score</button>
-    <button class="autoplay"  onclick="
-    autoPlay();
-    ">Auto Play</button>
    
-    <script src="12-rock-paper-scissor.js"></script>
+    <script src="10-rock-paper-scissor.js"></script>
   </body>
 </html>
